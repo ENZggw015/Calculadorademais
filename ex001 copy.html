@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora só de mais</title>
+</head>
+
+
+
+<style>
+    body {
+        background: rgb(206, 92, 92);
+    }
+
+    h1 {
+        text-align:center;
+        font-size: 37px;
+    }
+
+    input {
+        text-align:center;
+        background: rgb(255, 255, 255);
+        color:rgb(0, 0, 0);
+    }
+
+    .container {
+        text-align:center;
+        font-size: 35px;
+    }
+    
+</style>
+
+
+
+<body>
+    <div class="container"> 
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" id="button">
+    <div id="res">Resultado</div>
+    </div>
+
+    <script>
+        const n1 = document.getElementById("txtn1");
+        const n2 = document.getElementById("txtn2");
+        const button = document.getElementById("button");
+        const res = document.getElementById("res");
+
+        function Somar() {
+            const valor1 = parseInt(n1.value);
+            const valor2 = parseInt(n2.value); 
+            const soma = valor1 + valor2;
+            const msg = `O resultado da soma entre ${valor1} e ${valor2} é ${soma}`;
+            res.innerText = msg;
+        }
+        button.addEventListener('click', Somar)
+    </script>
+</body>
+</html>
